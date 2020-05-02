@@ -1,0 +1,21 @@
+version: '3.2'
+services:
+  customer-api:
+    container_name: "customer-api"
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - MONGO_DB_HOST=mongodb
+      - MONGO_DB_PORT=27017
+      - MONGO_DB_NAME=MDB
+    ports:
+      - "3101:8080"
+    depends_on:
+      - mongo-db
+  mongo-db:
+    image: mongo:4.2.6
+    container_name: "mongodb"
+    ports:
+      - "3102:27017"
+    restart: always
