@@ -1,8 +1,8 @@
-# Testcontainers Demo
+# Testcontainers, Rest-Assured and JUnit5
 
-This is a spring boot project that exposes /customers endpoint and data can be persisted in mongodb database.
+This is a Spring Boot project that exposes /customers endpoint and data can be persisted in MongoDB Database.
 
-In the Integration Tests, the Testcontainers Java library is used for starting mongodb in a docker container.
+In the Integration Tests, the Testcontainers Java library is used for starting MongoDB in a Docker container, Rest-Assured is used to interact with the endpoint and JUnit5 as the Test Runner.
  
 ## How to run Application
 
